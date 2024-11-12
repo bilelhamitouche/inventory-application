@@ -8,23 +8,133 @@
 
 body {
   height: 100svh;
-  display: flex;
-  background-color: black;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
 }
 
 .main-header {
   font-size: 3rem;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.items-center {
+  align-items: center;
+}
+
 .flex {
   display: flex;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
 .gap-16 {
   gap: 4rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+img {
+  object-fit: contain;
+  width: 200px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.h-full {
+  min-height: 100%;
+}
+
+.w-500 {
+  width: 500px;
+}
+
+.rounded {
+  border-radius: 5px;
+}
+
+.shadow {
+  box-shadow: 3px 3px 3px #ccc;
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: 2px solid blue;
+}
+
+button,
+.button {
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.bg-red {
+  background-color: #ff5555;
+}
+
+.bg-red:hover {
+  background-color: #dd5555;
+}
+
+.bg-blue {
+  background-color: #5555ff;
+}
+
+.bg-blue:hover {
+  background-color: #5555dd;
 }
