@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <link href="/style.css" rel="stylesheet">
+  </head>
+  <body class="p-4 flex flex-col gap-4">
+    <%- include("partials/navbar") %>
+    <ul class="grid grid-cols-4 gap-4">
+      <% brands.forEach((brand) => { %>
+        <%- include("partials/brand", { brand: brand }) %>
+      <% }) %>
+    </ul>
+  </body>
+</html>
