@@ -1,8 +1,10 @@
 <li class="flex flex-col gap-2 p-4 justify-between rounded shadow">
   <img src=<%= model.image %> height="150" />
-  <span><strong>Brand:</strong> <%= model.brand_name %></span>
-  <span><strong>Model:</strong> <%= model.model_name %></span>
-  <span><strong>Year:</strong> <%= model.year %></span>
-  <span><strong>Price:</strong> <%= model.price %></span>
-  <button class="bg-red rounded">Delete</button>
+  <span id="brand_name"><strong>Brand:</strong> <%= model.brand_name %></span>
+  <span id="model_name"><strong>Model:</strong> <%= model.model_name %></span>
+  <span id="model_year"><strong>Year:</strong> <%= model.year %></span>
+  <span id="model_price"><strong>Price:</strong> <%= model.price %></span>
+  <form method="post" action="/models/<%= model.id %>/delete">
+    <button class="bg-red rounded">Delete</button>
+  </form>
 </li>

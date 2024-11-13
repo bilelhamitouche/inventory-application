@@ -4,5 +4,8 @@
   </div>
   <span class="mt-auto"><%= brand.name %></span>
   <span>Made In <%= brand.country %></span>
-  <button class="bg-red rounded">Delete</button>
+  <form method="post" action="/brands/<%= brand.id %>/delete" class="flex gap-4 items-center p-4">
+    <button class="bg-red rounded">Delete</button>
+    <a href="/brands/<%= brand.id %>" class="bg-blue button rounded">Models</a>
+  </form>
 </li>
