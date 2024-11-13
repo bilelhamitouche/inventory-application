@@ -6,10 +6,25 @@ async function listModels(req, res) {
 }
 
 async function createModelGet(req, res) {
-  res.render("createModel", { title: "Create model" });
+  const brands = await db.getBrands();
+  res.render("createModel", { title: "Create model", brands: brands });
+}
+
+async function createModelPost(req, res) {
+  const { name, year, price, brand_id, image } = req.body;
+  await db.insertModel(name, year, price, parseInt(brand_id), image);
+  res.redirect("/models");
+}
+
+async function deleteModel(req, res) {
+  const { id } = req.params;
+  await db.deleteModel(id);
+  res.redirect("/models");
 }
 
 module.exports = {
   listModels,
   createModelGet,
+  createModelPost,
+  deleteModel,
 };
