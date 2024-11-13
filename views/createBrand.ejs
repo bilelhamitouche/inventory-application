@@ -9,22 +9,18 @@
   <body class="h-full p-4">
     <%- include("partials/navbar") %>
     <h2 class="text-center p-4">Create brand</h2>
-    <form method="post" action="/brand/create" class="flex flex-col justify-center items-center gap-2">
+    <form method="post" action="/brands/create" class="flex flex-col justify-center items-center gap-2">
       <label for="name" class="w-500 flex flex-col gap-2">
         <span>Name: </span>
         <input type="text" name="name" id="name" />
       </label>  
-      <label for="year" class="w-500 flex flex-col gap-2">
-        <span>Year: </span>
-        <input type="number" name="year" id="year" />
+      <label for="country" class="w-500 flex flex-col gap-2">
+        <span>Country: </span>
+        <input type="text" name="country" id="country" />
       </label>  
-      <label for="price" class="w-500 flex flex-col gap-2">
-        <span>Price: </span>
-        <input type="number" name="price" id="price" />
-      </label>  
-      <label for="image" class="w-500 flex flex-col gap-2">
-        <span>Image Url: </span>
-        <input type="text" name="image" id="image" />
+      <label for="logo" class="w-500 flex flex-col gap-2">
+        <span>Logo Url: </span>
+        <input type="text" name="logo" id="logo" />
       </label>  
       <div class="p-4">
         <button type="submit" class="bg-blue rounded">Submit</button>
