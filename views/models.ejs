@@ -8,10 +8,14 @@
   </head>
   <body class="flex flex-col p-4 gap-4">
     <%- include("partials/navbar") %>
+    <% if(models.length > 0) { %>
     <ul class="grid grid-cols-4 gap-4">
       <% models.forEach((model) => { %>
         <%- include("partials/model", { model: model }); %>
       <% }) %>
     </ul>
+    <% } else { %>
+      <h1 class="text-center">No models</h1>
+    <% } %>
   </body>
 </html>
